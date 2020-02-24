@@ -66,6 +66,7 @@ namespace ISET2020DecouverteWinForm
             DeltaMaxY(Graphique1.Dessin);
             //translation du dessin vers la picturebox
             Translation(Graphique1.Dessin);
+            //Adaptation du graphique à la PBGraphique
             Zoom(Graphique1.Dessin);
 
             for (int i = 0; i < nb_points - 1; i++)
@@ -74,10 +75,6 @@ namespace ISET2020DecouverteWinForm
                 dessinsauve.AddEllipse(Graphique1.Dessin[i].X - 1, Graphique1.Dessin[i].Y -1, 2, 2);
             }
 
-            /*for(int i=0; i<(pointsGraphique.Length); i++)
-            {
-                lbPointsGraphique.Items.Add("X : " + pointsGraphique[i].X + " Y : " + pointsGraphique[i].Y);
-            }*/
             pbGraphique.Invalidate(false);
         }
 
